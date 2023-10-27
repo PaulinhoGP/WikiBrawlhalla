@@ -48,12 +48,14 @@
 
 
         function logar(){
+            event.preventDefault();
 
-            var login = document.getElementById('login').value;
-            var senha = document.getElementById('senha').value;
+            let user = document.getElementById('login').value;
+            let pass = document.getElementById('senha').value;
 
-            if(login == "admin" && senha == "admin"){
+            if(user == "admin" && pass == "admin"){
                 alert('Sucesso');
+                window.location.href = "pagina inicial.html"
             }else{
                 alert('Usuário ou senha incorretos');
             }
